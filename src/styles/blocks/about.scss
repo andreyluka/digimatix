@@ -1,0 +1,118 @@
+.about {
+   position: relative;
+   padding-bottom: rem(198);
+
+   &::before {
+      content: '';
+      display: block;
+      border-radius: 50%;
+      border: 2px solid white;
+      opacity: 0.08; 
+      position: absolute;
+      top: 10%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      width: 94%;
+      padding-top: 94%;
+      pointer-events: none;
+   }
+
+   @include tablets {     
+      padding-bottom: rem(120);
+   }
+
+   &__desc, &__pic {
+      width: 47.37%;
+      
+      @include laptop {
+         width: 60%;
+      }
+   }
+   
+   &__desc {
+      position: relative;
+      z-index: 10;
+      
+      @include phones {
+         width: 90%;
+         text-align: center;
+      }
+   }
+
+   &__title {
+      font-size: rem(48);
+      margin-bottom: rem(48);
+
+      @include tablets {
+         font-size: rem(36);       
+         margin-bottom: rem(36);
+      }
+   }
+   
+   &__text {
+      font-size: rem(20);
+      line-height: 1.4;
+      margin-bottom: rem(48);
+
+      @include tablets {
+         font-size: rem(16);       
+         margin-bottom: rem(36);
+      }
+   }
+
+   &__btns {
+      display: flex;
+   }
+
+   &__button {
+      margin-right: rem(28);
+   }
+
+   &__pic {
+      position: absolute;
+      bottom: rem(-95);
+      right: 0;
+      background: radial-gradient(135.85% 119.82% at 100% 100%, $purple 22.68%, rgba($purple, 0) 100%);
+      border-radius: 50%;
+      mix-blend-mode: lighten;
+      animation: animationPicture 2.5s ease infinite;
+
+      &:hover {
+         animation-play-state: paused;
+      }
+
+      &::before, &::after {
+         content: '';
+         display: block;
+         border-radius: 50%;
+         border: 2px solid white;
+         opacity: 0.08; 
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         pointer-events: none;
+      }
+      
+      &::before {
+         width: 111%;
+         height: 111%;
+      }
+      
+      &::after {
+         width: 198.61%;
+         height: 198.61%;
+      }
+   }
+   
+   &__img {
+      width: 100%;
+      mix-blend-mode: luminosity;
+   }
+}
+
+@keyframes animationPicture {
+   0% {transform: scale(1);}
+   50% {transform: scale(1.03);}
+   100% {transform: scale(1);}
+ }

@@ -1,0 +1,165 @@
+.slider {
+   width: 100%;
+
+   &__controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: rem(32);
+      
+      @include phones {
+         align-items: flex-end;         
+      }
+   }
+
+   &__tab {
+      margin-right: rem(48);
+      color: $indigo;
+      font-size: rem(16);
+      font-weight: 700;
+      letter-spacing: 0.03125em;
+      white-space: nowrap;
+      padding-bottom: 0.8125em;
+
+      &:hover {
+         color: $purple;
+      }
+
+      &--active {
+         color: $purple;
+         border-bottom: 2px solid $purple;
+         pointer-events: none;
+      }
+
+      @include tablets {
+         margin-right: rem(20);
+      }
+      
+      @include phones {
+         margin-bottom: rem(15);
+   
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+
+   &__btns {
+      display: flex;
+      flex-wrap: nowrap;
+   }
+
+   &__button {
+      width: rem(48);
+      height: rem(48);
+      padding: rem(12);
+      border-radius: rem(6);
+      background-color: $gray;
+      transition: 0.3s;
+      margin-right: rem(16);
+      
+      &:last-child {
+         margin-right: 0;
+      }
+      
+      &:hover {
+         background-color: $purple;
+         
+         .slider__arrow {
+            stroke: white;
+         }
+      }
+      
+      &:active {
+         transform: scale(0.92);
+      }
+
+      @include tablets {
+         margin-right: rem(6);
+      }
+   }
+
+   &__arrow {
+      stroke: $purple;
+      stroke-width: 2;
+      stroke-linecap: round;
+      transition: 0.3s;
+      pointer-events: none;
+   }
+
+   &__arrow-prev {
+      transform: rotate(180deg);
+   }
+
+   &__container {
+      position: relative;
+      overflow: hidden;
+
+
+      display: none;
+
+      &--active {
+         display: block;
+      }
+   }
+   
+   &__list {      
+      display: grid;
+      grid-auto-columns: 26.315%;
+      grid-auto-flow: column;
+      transition: transform 0.3s ease;
+      transform: translateX(0%);
+      margin-bottom: rem(40);
+
+      @include laptop {
+         grid-auto-columns: 34.3%;
+      }
+
+      @include tablets {
+         grid-auto-columns: 51.5%;
+      }
+
+      @include phones {
+         grid-auto-columns: 100%;
+      }
+   }
+
+   &__item {
+      padding-right: 20%;
+      
+      @include laptop {
+         padding-right: 8.3%;
+      }
+
+      @include tablets {
+         padding-right: 6%;
+      }
+
+      @include phones {
+         padding: 0 5% 0;
+      }
+   }
+
+
+   &__dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__dot {
+      width: rem(8);
+      height: rem(8);
+      border-radius: 50%;
+      background: $dark-gray;
+      margin-right: 13px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+      &--active {
+         background-color: $purple;
+      }
+   }
+}

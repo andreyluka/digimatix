@@ -1,0 +1,26 @@
+.button {
+   padding: 0.667em 1em;
+   border-radius: rem(6px);
+   font-size: rem(12px);
+   font-weight: 900; 
+   line-height: 2;
+   letter-spacing: 0.083em;
+   text-transform: uppercase;
+   color: $purple;
+   background-color: #fff;
+   transition: 0.3s;
+   position: relative;
+   
+   &:hover {
+      color: #fff;
+      background-color: $purple;
+   }
+   
+   &:active {
+      transform: scale(0.92);
+   }
+
+   &--large {
+      padding: 1em 1.333em;
+   }
+}

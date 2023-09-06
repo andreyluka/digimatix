@@ -1,0 +1,52 @@
+.questions {
+   padding: rem(72) 0 rem(112);
+   color: white;
+   text-align: center;
+   background: linear-gradient(rgba(black, 0.70) 0%, rgba(black, 0.70) 100%), $purple;
+   mix-blend-mode: multiply;
+   position: relative;
+   overflow: hidden;
+   z-index: 10;
+
+   &::after {
+      content: '';
+      display: inline-block;
+      background: url('./images/content/bg-questions-pattern.png') center / cover no-repeat;
+      width: 2000px;
+      height: 800px;
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -10;
+   }
+
+   @include tablets {
+      padding: rem(65) 0 rem(60);
+   }
+
+   &__container {
+      background: inherit;
+      mix-blend-mode: lighten;
+   }
+
+   &__title {
+      font-size: rem(32);
+      margin-bottom: rem(32);
+      
+      @include tablets {
+         font-size: rem(28);
+      }
+   }
+
+   &__text {
+      max-width: 555px;
+      margin: 0 auto rem(48);
+      font-size: rem(20);
+      line-height: 1.4;
+
+      @include tablets {
+         font-size: rem(16);
+      }
+   }
+}

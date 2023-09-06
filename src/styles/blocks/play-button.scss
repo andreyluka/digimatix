@@ -1,0 +1,26 @@
+.play-button {
+   width: rem(48);
+   height: rem(48);
+   padding: rem(12);
+   background-color: $purple;
+   border-radius: 50%;
+   cursor: pointer;
+   transition: 0.3s;
+   
+   &:hover {
+      background-color: white;
+      
+      .play-button__icon {
+         stroke: $purple;
+      }
+   }
+
+   &:active {
+      transform: scale(0.92);
+   }
+
+   &__icon {
+      stroke: white;
+      transition: 0.3s;
+   }
+}

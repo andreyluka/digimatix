@@ -1,0 +1,29 @@
+.hero {
+   color: white;
+   background: black;
+   mix-blend-mode: multiply; 
+   position: relative;
+   overflow-x: clip;
+   
+   &::before, &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+   }
+   
+   &::before {
+      top: 0;
+      left: 0;
+      background: url('./images/content/bg-hero.png') center / cover no-repeat, rgba($purple, 0.1);
+      opacity: 0.6;
+   }
+
+   &::after {
+      top: 0%;
+      left: 12%;
+      background: url('./images/content/bg-hero-pattern.png') left center / cover no-repeat;
+   }
+}

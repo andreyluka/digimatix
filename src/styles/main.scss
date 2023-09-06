@@ -1,0 +1,29 @@
+// variables
+
+$light-purple: #BB6BD9;
+$purple: #5101A6;
+$indigo: #200142;
+$black: #0B0B0B;
+$dark-gray: #E0E0E0;
+$gray: #F6F6FA;
+
+
+// breakpoints
+
+$desctop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+
+// media
+
+@import "./layout/media.scss";
+
+// layout
+
+@import "./layout/mixins.scss";
+@import "./layout/layout.scss";
+@import "./layout/fonts.scss";
+
+@import "./blocks/*.scss";

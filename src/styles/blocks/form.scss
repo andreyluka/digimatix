@@ -1,0 +1,109 @@
+.form {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   font-size: rem(16);
+   font-weight: 700;
+   background: inherit;
+
+   @include tablets {
+      justify-content: center;
+   }
+
+   &__label, &__button {
+      width: 21.05%;
+      position: relative;
+      
+      @include laptop {
+         width: 31.6%;
+         margin-bottom: rem(30);
+      }
+
+      @include tablets {
+         width: 80%;
+         max-width: rem(455);
+      }
+   }
+
+   &__label {
+      background: inherit;
+   }
+
+   &__input {
+      width: 100%;
+      padding: 1.5em;
+      background-color: transparent;
+      border: white solid 1px;
+      border-radius: rem(6);
+      font-weight: 700;
+      color: $light-purple;
+      transition: 0.15s all ease;
+      outline: none;
+      
+      &::placeholder {
+         color: transparent;
+      }
+
+      &:focus, &:valid {
+         border-color: $light-purple;
+      }
+
+      &:focus + .form__input-name,
+      &:not(:placeholder-shown) + .form__input-name {
+         position: absolute;
+         top: 0;
+         left: 0.625rem;
+         transform: translateY(-50%);
+         font-size: rem(12);
+         font-weight: 400; 
+         padding: 0 rem(17);
+         background: inherit;
+         
+         @include tablets {
+            padding: 0 rem(10.67);
+         }
+      }
+
+      @include tablets {
+         padding: 1.2em;
+      }
+   }
+
+   &__input-name {
+      position: absolute;
+      top: 50%;
+      left: 1.5rem;
+      transform: translateY(-50%);
+      pointer-events: none;
+      transition: 0.15s all ease;
+
+      @include tablets {
+         left: rem(18);
+      }
+   }  
+   
+   &__button {
+      padding: 1.5em 1em;
+      background-color: $purple;
+      border-radius: 6px; 
+      text-transform: uppercase;
+      font-weight: 700;
+      color: white;
+      transition: 0.3s;
+      justify-self: center;
+
+      &:hover {
+         color: $purple;
+         background-color: white;
+      }
+      
+      &:active {
+         transform: scale(0.92);
+      }
+
+      @include tablets {
+         padding: 1.2em 1em;
+      }
+   }
+}
