@@ -1,11 +1,11 @@
-# art-store
+# digimatix
 
 * HTML
 * CSS / SCSS 
 * JavaScript 
-* Vue.js
-* yarn / Webpack
+* Gulp
+* Адаптивная верстка
 
 
 
-#### [Ссылка на GitHub Pages](https://andreiluka.github.io/art-store/dist/)
+#### [Ссылка на GitHub Pages](https://andreyluka.github.io/digimatix/dist/)
