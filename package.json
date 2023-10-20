@@ -29,7 +29,8 @@
     "gulp-svg-sprite": "^2.0.3",
     "gulp-svgo": "^2.2.1",
     "gulp-uglify": "^3.0.2",
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "node-sass-tilde-importer": "^1.0.2"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"

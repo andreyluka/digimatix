@@ -8,7 +8,7 @@
       sliderItems,
       sliderDots,
       sliderItemWidth,
-      lastIndex
+      lastIndex,
       currentIndex = 0,
       step = 0;
 

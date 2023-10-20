@@ -22,6 +22,7 @@ $phones: 480px;
 
 // layout
 
+@import "~normalize.css/normalize";
 @import "./layout/mixins.scss";
 @import "./layout/layout.scss";
 @import "./layout/fonts.scss";
